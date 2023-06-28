@@ -7,15 +7,17 @@ int main()
 	{
 		cin>>arr[i];
 	}
-	for(int i=0;i<4;i++)
+	int count=1;
+	while(count<5)
 	{
-		for(int j=i+1;j<5;j++)
+		for(int i=0;i<5-count;i++)
 		{
-			if(arr[j]<arr[i])
+			if(arr[i]>arr[i+1])
 			{
-				swap(arr[j],arr[i]);
+				swap(arr[i],arr[i+1]);
 			}
 		}
+		count++;
 	}
 	for(int i=0;i<5;i++)
 	{
