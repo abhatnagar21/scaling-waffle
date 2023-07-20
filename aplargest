@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n=7;
+	int a[n]={10,13,16,17,18,19,27};
+	int cd[n-1];
+	for(int i=0;i<n-1;i++)
+	{
+		cd[i]=a[i+1]-a[i];
+	}
+	//3 2 2 2 3 5
+	int maxdif=0;
+	int fs=0;
+	int fe=0;
+	for(int i=0;i<6;i++)
+	{
+		int val=cd[i];
+		int start=i;
+		int end=i;
+		for(int j=i+1;j<6;j++)
+		{
+			if(val!=cd[j])
+			{
+				end=j;
+				break;
+			}
+		}
+		
+	   int cdif=end-start;
+	   if(cdif>maxdif)
+	   {
+	   	maxdif=cdif;
+	   	fs=start;
+	   	fe=end;
+	   }
+	}
+	for(int i=fs;i<=fe;i++)
+	{
+	cout<<a[i]<<" ";	
+	}	
+}
