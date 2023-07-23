@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int hello(int a,int b)
+{
+    if (a==0 || b==0)
+    {
+        return 0;
+    }
+    cout<<a<<" "<<b<<"\n";
+    hello(a,b-1);//2,1
+    hello(a-1,b);
+
+    
+}
+
+int main()
+{
+
+    hello(2,2);
+}
